@@ -2,61 +2,60 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>NeoTask // لوحة المهام الذكية</title>
-                <link rel="stylesheet" href="css/style.css">
-                    <link rel="preconnect" href="https://fonts.googleapis.com">
-                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                            <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-                            </head>
-                            <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoTask // لوحة المهام الذكية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-                                <div class="cyber-container">
-                                        <header class="cyber-header">
-                                                    <h1 class="neon-text">NEO<span>TASK</span></h1>
-                                                                <p class="subtitle">لوحة إدارة المهام البرمجية والمدرسية الذكية</p>
-                                                                        </header>
+    <div class="cyber-container">
+        <header class="cyber-header">
+            <h1 class="neon-text">NEO<span>TASK</span></h1>
+            <p class="subtitle">لوحة إدارة المهام البرمجية والمدرسية الذكية</p>
+        </header>
 
-                                                                                <section class="dashboard-stats">
-                                                                                            <div class="stat-box">
-                                                                                                            <span class="stat-label">إجمالي المهام</span>
-                                                                                                                            <span id="total-tasks" class="stat-number">0</span>
-                                                                                                                                        </div>
-                                                                                                                                                    <div class="stat-box accent">
-                                                                                                                                                                    <span class="stat-label">المهام المكتملة</span>
-                                                                                                                                                                                    <span id="completed-tasks" class="stat-number">0</span>
-                                                                                                                                                                                                </div>
-                                                                                                                                                                                                            <div class="stat-box progress-box">
-                                                                                                                                                                                                                            <span class="stat-label">نسبة الإنجاز</span>
-                                                                                                                                                                                                                                            <span id="progress-percent" class="stat-number">0%</span>
-                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                </section>
+        <section class="dashboard-stats">
+            <div class="stat-box">
+                <span class="stat-label">إجمالي المهام</span>
+                <span id="total-tasks" class="stat-number">0</span>
+            </div>
+            <div class="stat-box accent">
+                <span class="stat-label">المهام المكتملة</span>
+                <span id="completed-tasks" class="stat-number">0</span>
+            </div>
+            <div class="stat-box progress-box">
+                <span class="stat-label">نسبة الإنجاز</span>
+                <span id="progress-percent" class="stat-number">0%</span>
+            </div>
+        </section>
 
-                                                                                                                                                                                                                                                                        <section class="input-section">
-                                                                                                                                                                                                                                                                                    <div class="input-group">
-                                                                                                                                                                                                                                                                                                    <input type="text" id="task-input" placeholder="اكتب مهمتك البرمجية أو المدرسية الجديدة هنا..." autocomplete="off">
-                                                                                                                                                                                                                                                                                                                    <button id="add-btn" class="cyber-btn">إضافة المهمة</button>
-                                                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                                                            <p id="error-msg" class="error-message">برجاء كتابة مهمة أولاً!</p>
-                                                                                                                                                                                                                                                                                                                                                    </section>
+        <section class="input-section">
+            <div class="input-group">
+                <input type="text" id="task-input" placeholder="اكتب مهمتك البرمجية أو المدرسية الجديدة هنا..." autocomplete="off">
+                <button id="add-btn" class="cyber-btn">إضافة المهمة</button>
+            </div>
+            <p id="error-msg" class="error-message">برجاء كتابة مهمة أولاً!</p>
+        </section>
 
-                                                                                                                                                                                                                                                                                                                                                            <main class="tasks-section">
-                                                                                                                                                                                                                                                                                                                                                                        <ul id="tasks-list" class="cyber-list">
-                                                                                                                                                                                                                                                                                                                                                                                        </ul>
-                                                                                                                                                                                                                                                                                                                                                                                                </main>
-                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+        <main class="tasks-section">
+            <ul id="tasks-list" class="cyber-list">
+                </ul>
+        </main>
 
-                                                                                                                                                                                                                                                                                                                                                                                                        <div id="toast" class="cyber-toast">تم تحديث القائمة بنجاح!</div>
+        <footer class="cyber-footer">
+            <p>تم التطوير بواسطة: <span class="dev-name">المبرمج حازم خالد</span></p>
+            <div class="dev-contacts">
+                <a href="tel:+201002406273" class="contact-link">📞 +201002406273</a>
+                <span class="separator">|</span>
+                <a href="mailto:dev.hazem.abdalkhaliq@gmail.com" class="contact-link">✉️ dev.hazem.abdalkhaliq@gmail.com</a>
+            </div>
+        </footer>
 
-                                                                                                                                                                                                                                                                                                                                                                                                        <footer class="cyber-footer">
-                                                                                                                                                                                                                                                                                                                                                                                                                        <p>تم التطوير بواسطة: <span class="dev-name">المبرمج حازم خالد</span></p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="dev-contacts">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                    <a href="tel:+201002406273" class="contact-link">📞 +201002406273</a>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <span class="separator">|</span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <a href="mailto:dev.hazem.abdalkhaliq@gmail.com" class="contact-link">✉️ dev.hazem.abdalkhaliq@gmail.com</a>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </footer>
+    </div> <div id="toast" class="cyber-toast">تم تحديث القائمة بنجاح!</div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                            <script src="js/app.js"></script>
-                                                                                                                                                                                                                                                                                                                                                                                                            </body>
-                                                                                                                                                                                                                                                                                                                                                                                                            </html>
+    <script src="js/app.js"></script>
+</body>
+</html>

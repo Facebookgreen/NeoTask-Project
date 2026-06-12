@@ -1,299 +1,333 @@
 /* الإعدادات العامة وإعادة التعيين */
 * {
     margin: 0;
-        padding: 0;
-            box-sizing: border-box;
-                font-family: 'Cairo', sans-serif;
-                }
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
 
-                body {
-                    background-color: #0a0b10;
-                        color: #e2e8f0;
-                            display: flex;
-                                justify-content: center;
-                                    align-items: center;
-                                        min-height: 100vh;
-                                            padding: 20px;
-                                                overflow-x: hidden;
-                                                }
+body {
+    background-color: #0a0b10;
+    color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
 
-                                                /* الحاوية الرئيسية للموقع */
-                                                .cyber-container {
-                                                    width: 100%;
-                                                        max-width: 750px;
-                                                            background: rgba(16, 18, 27, 0.8);
-                                                                border: 1px solid #1f293d;
-                                                                    border-radius: 16px;
-                                                                        padding: 30px;
-                                                                            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-                                                                                backdrop-filter: blur(10px);
-                                                                                }
+/* الحاوية الرئيسية للموقع */
+.cyber-container {
+    width: 100%;
+    max-width: 750px;
+    background: rgba(16, 18, 27, 0.8);
+    border: 1px solid #1f293d;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    
+    /* تنظيم داخلي عمودي لمنع كسر أو خروج العناصر جانبياً */
+    display: flex;
+    flex-direction: column;
+}
 
-                                                                                /* الهيدر والعناوين */
-                                                                                .cyber-header {
-                                                                                    text-align: center;
-                                                                                        margin-bottom: 30px;
-                                                                                        }
+/* الهيدر والعناوين */
+.cyber-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-                                                                                        .neon-text {
-                                                                                            font-size: 2.5rem;
-                                                                                                font-weight: 700;
-                                                                                                    color: #00f2fe;
-                                                                                                        letter-spacing: 2px;
-                                                                                                            text-shadow: 0 0 10px rgba(0, 242, 254, 0.5), 0 0 20px rgba(0, 242, 254, 0.2);
-                                                                                                            }
+.neon-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00f2fe;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5), 0 0 20px rgba(0, 242, 254, 0.2);
+}
 
-                                                                                                            .neon-text span {
-                                                                                                                color: #4facfe;
-                                                                                                                    text-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
-                                                                                                                    }
+.neon-text span {
+    color: #4facfe;
+    text-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
+}
 
-                                                                                                                    .subtitle {
-                                                                                                                        color: #64748b;
-                                                                                                                            font-size: 0.95rem;
-                                                                                                                                margin-top: 5px;
-                                                                                                                                }
+.subtitle {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-top: 5px;
+}
 
-                                                                                                                                /* لوحة الإحصائيات (Dashboard Stats) */
-                                                                                                                                .dashboard-stats {
-                                                                                                                                    display: grid;
-                                                                                                                                        grid-template-columns: repeat(3, 1fr);
-                                                                                                                                            gap: 15px;
-                                                                                                                                                margin-bottom: 30px;
-                                                                                                                                                }
+/* لوحة الإحصائيات (Dashboard Stats) */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
 
-                                                                                                                                                .stat-box {
-                                                                                                                                                    background: #131622;
-                                                                                                                                                        border: 1px solid #24293e;
-                                                                                                                                                            border-radius: 12px;
-                                                                                                                                                                padding: 15px;
-                                                                                                                                                                    text-align: center;
-                                                                                                                                                                        transition: transform 0.3s ease, border-color 0.3s ease;
-                                                                                                                                                                        }
+.stat-box {
+    background: #131622;
+    border: 1px solid #24293e;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
 
-                                                                                                                                                                        .stat-box:hover {
-                                                                                                                                                                            transform: translateY(-3px);
-                                                                                                                                                                                border-color: #00f2fe;
-                                                                                                                                                                                }
+.stat-box:hover {
+    transform: translateY(-3px);
+    border-color: #00f2fe;
+}
 
-                                                                                                                                                                                .stat-label {
-                                                                                                                                                                                    display: block;
-                                                                                                                                                                                        font-size: 0.85rem;
-                                                                                                                                                                                            color: #94a3b8;
-                                                                                                                                                                                                margin-bottom: 5px;
-                                                                                                                                                                                                }
+.stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 5px;
+}
 
-                                                                                                                                                                                                .stat-number {
-                                                                                                                                                                                                    font-size: 1.6rem;
-                                                                                                                                                                                                        font-weight: bold;
-                                                                                                                                                                                                            color: #00f2fe;
-                                                                                                                                                                                                            }
+.stat-number {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #00f2fe;
+}
 
-                                                                                                                                                                                                            .stat-box.accent .stat-number {
-                                                                                                                                                                                                                color: #00ff87;
-                                                                                                                                                                                                                }
+.stat-box.accent .stat-number {
+    color: #00ff87;
+}
 
-                                                                                                                                                                                                                .stat-box.progress-box .stat-number {
-                                                                                                                                                                                                                    color: #ff007f;
-                                                                                                                                                                                                                    }
+.stat-box.progress-box .stat-number {
+    color: #ff007f;
+}
 
-                                                                                                                                                                                                                    /* صندوق الإدخال والأزرار */
-                                                                                                                                                                                                                    .input-section {
-                                                                                                                                                                                                                        margin-bottom: 25px;
-                                                                                                                                                                                                                        }
+/* صندوق الإدخال والأزرار */
+.input-section {
+    margin-bottom: 25px;
+}
 
-                                                                                                                                                                                                                        .input-group {
-                                                                                                                                                                                                                            display: flex;
-                                                                                                                                                                                                                                gap: 10px;
-                                                                                                                                                                                                                                }
+.input-group {
+    display: flex;
+    gap: 10px;
+}
 
-                                                                                                                                                                                                                                #task-input {
-                                                                                                                                                                                                                                    flex: 1;
-                                                                                                                                                                                                                                        background: #131622;
-                                                                                                                                                                                                                                            border: 1px solid #24293e;
-                                                                                                                                                                                                                                                border-radius: 8px;
-                                                                                                                                                                                                                                                    padding: 12px 20px;
-                                                                                                                                                                                                                                                        color: #fff;
-                                                                                                                                                                                                                                                            font-size: 0.95rem;
-                                                                                                                                                                                                                                                                outline: none;
-                                                                                                                                                                                                                                                                    transition: border-color 0.3s ease;
-                                                                                                                                                                                                                                                                    }
+#task-input {
+    flex: 1;
+    background: #131622;
+    border: 1px solid #24293e;
+    border-radius: 8px;
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
 
-                                                                                                                                                                                                                                                                    #task-input:focus {
-                                                                                                                                                                                                                                                                        border-color: #00f2fe;
-                                                                                                                                                                                                                                                                            box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
-                                                                                                                                                                                                                                                                            }
+#task-input:focus {
+    border-color: #00f2fe;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+}
 
-                                                                                                                                                                                                                                                                            .cyber-btn {
-                                                                                                                                                                                                                                                                                background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-                                                                                                                                                                                                                                                                                    border: none;
-                                                                                                                                                                                                                                                                                        border-radius: 8px;
-                                                                                                                                                                                                                                                                                            color: #0a0b10;
-                                                                                                                                                                                                                                                                                                font-weight: bold;
-                                                                                                                                                                                                                                                                                                    padding: 0 25px;
-                                                                                                                                                                                                                                                                                                        cursor: pointer;
-                                                                                                                                                                                                                                                                                                            transition: all 0.3s ease;
-                                                                                                                                                                                                                                                                                                            }
+.cyber-btn {
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    border: none;
+    border-radius: 8px;
+    color: #0a0b10;
+    font-weight: bold;
+    padding: 0 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-                                                                                                                                                                                                                                                                                                            .cyber-btn:hover {
-                                                                                                                                                                                                                                                                                                                box-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
-                                                                                                                                                                                                                                                                                                                    transform: scale(1.02);
-                                                                                                                                                                                                                                                                                                                    }
+.cyber-btn:hover {
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
+    transform: scale(1.02);
+}
 
-                                                                                                                                                                                                                                                                                                                    .error-message {
-                                                                                                                                                                                                                                                                                                                        color: #ff4a5a;
-                                                                                                                                                                                                                                                                                                                            font-size: 0.85rem;
-                                                                                                                                                                                                                                                                                                                                margin-top: 5px;
-                                                                                                                                                                                                                                                                                                                                    display: none;
-                                                                                                                                                                                                                                                                                                                                    }
+.error-message {
+    color: #ff4a5a;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+}
 
-                                                                                                                                                                                                                                                                                                                                    /* قائمة المهام التفاعلية */
-                                                                                                                                                                                                                                                                                                                                    .cyber-list {
-                                                                                                                                                                                                                                                                                                                                        list-style: none;
-                                                                                                                                                                                                                                                                                                                                            display: flex;
-                                                                                                                                                                                                                                                                                                                                                flex-direction: column;
-                                                                                                                                                                                                                                                                                                                                                    gap: 12px;
-                                                                                                                                                                                                                                                                                                                                                    }
+/* قائمة المهام */
+.cyber-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
-                                                                                                                                                                                                                                                                                                                                                    .task-item {
-                                                                                                                                                                                                                                                                                                                                                        background: #131622;
-                                                                                                                                                                                                                                                                                                                                                            border: 1px solid #24293e;
-                                                                                                                                                                                                                                                                                                                                                                border-radius: 8px;
-                                                                                                                                                                                                                                                                                                                                                                    padding: 15px;
-                                                                                                                                                                                                                                                                                                                                                                        display: flex;
-                                                                                                                                                                                                                                                                                                                                                                            justify-content: space-between;
-                                                                                                                                                                                                                                                                                                                                                                                align-items: center;
-                                                                                                                                                                                                                                                                                                                                                                                    animation: fadeIn 0.3s ease-in-out;
-                                                                                                                                                                                                                                                                                                                                                                                        transition: all 0.3s ease;
-                                                                                                                                                                                                                                                                                                                                                                                        }
+.task-item {
+    background: #131622;
+    border: 1px solid #24293e;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+    transition: all 0.3s ease;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                        .task-item:hover {
-                                                                                                                                                                                                                                                                                                                                                                                            background: #171b2a;
-                                                                                                                                                                                                                                                                                                                                                                                                border-color: #334155;
-                                                                                                                                                                                                                                                                                                                                                                                                }
+.task-item:hover {
+    background: #171b2a;
+    border-color: #334155;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                .task-text {
-                                                                                                                                                                                                                                                                                                                                                                                                    font-size: 1rem;
-                                                                                                                                                                                                                                                                                                                                                                                                        cursor: pointer;
-                                                                                                                                                                                                                                                                                                                                                                                                            user-select: none;
-                                                                                                                                                                                                                                                                                                                                                                                                                transition: all 0.2s ease;
-                                                                                                                                                                                                                                                                                                                                                                                                                    flex: 1;
-                                                                                                                                                                                                                                                                                                                                                                                                                        text-align: right;
-                                                                                                                                                                                                                                                                                                                                                                                                                        }
+.task-text {
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+    flex: 1;
+    text-align: right;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                        /* التنسيق عند إتمام المهمة */
-                                                                                                                                                                                                                                                                                                                                                                                                                        .task-item.completed {
-                                                                                                                                                                                                                                                                                                                                                                                                                            border-color: #00ff87;
-                                                                                                                                                                                                                                                                                                                                                                                                                                background: rgba(0, 255, 135, 0.03);
-                                                                                                                                                                                                                                                                                                                                                                                                                                }
+.task-item.completed {
+    border-color: #00ff87;
+    background: rgba(0, 255, 135, 0.03);
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                .task-item.completed .task-text {
-                                                                                                                                                                                                                                                                                                                                                                                                                                    color: #64748b;
-                                                                                                                                                                                                                                                                                                                                                                                                                                        text-decoration: line-through;
-                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+.task-item.completed .task-text {
+    color: #64748b;
+    text-decoration: line-through;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                        /* أزرار التحكم داخل المهمة */
-                                                                                                                                                                                                                                                                                                                                                                                                                                        .task-actions {
-                                                                                                                                                                                                                                                                                                                                                                                                                                            display: flex;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                gap: 8px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                .action-btn {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                    border: none;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        border-radius: 4px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            padding: 6px 12px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                font-size: 0.8rem;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    font-weight: bold;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                        cursor: pointer;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            transition: all 0.2s ease;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+.action-btn {
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .check-btn {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                background: #00ff87;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    color: #0a0b10;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+.check-btn {
+    background: #00ff87;
+    color: #0a0b10;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .delete-btn {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        background: #ff007f;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color: #fff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+.delete-btn {
+    background: #ff007f;
+    color: #fff;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .action-btn:hover {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                opacity: 0.85;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    transform: scale(1.05);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+.action-btn:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    /* توست الإشعارات (Toast) */
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .cyber-toast {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        position: fixed;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            bottom: -60px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                left: 50%;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    transform: translateX(-50%);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color: #0a0b10;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                padding: 12px 30px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    border-radius: 30px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        font-weight: bold;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            box-shadow: 0 10px 25px rgba(0, 242, 254, 0.3);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    z-index: 999;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+/* شريط حقوق المبرمج الأسفل */
+.cyber-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dashed #24293e;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .cyber-toast.show {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        bottom: 30px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+.dev-name {
+    color: #00f2fe;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        /* أنيميشن الدخول */
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @keyframes fadeIn {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            from { opacity: 0; transform: translateY(10px); }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                to { opacity: 1; transform: translateY(0); }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                /* شريط حقوق المبرمج الأسفل */
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .cyber-footer {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    margin-top: 30px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        padding-top: 20px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            border-top: 1px dashed #24293e;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                text-align: center;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    font-size: 0.85rem;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        color: #64748b;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+.dev-contacts {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .dev-name {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color: #00f2fe;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                font-weight: bold;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    text-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+.contact-link {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .dev-contacts {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        margin-top: 8px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            display: flex;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                justify-content: center;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    gap: 15px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        flex-wrap: wrap;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+.contact-link:hover {
+    color: #00ff87;
+    text-shadow: 0 0 8px rgba(0, 255, 135, 0.3);
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .contact-link {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color: #94a3b8;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                text-decoration: none;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    transition: color 0.3s ease;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+.separator {
+    color: #24293e;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .contact-link:hover {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        color: #00ff87;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            text-shadow: 0 0 8px rgba(0, 255, 135, 0.3);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+/* توست الإشعارات */
+.cyber-toast {
+    position: fixed;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    color: #0a0b10;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0, 242, 254, 0.3);
+    transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    z-index: 999;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .separator {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                color: #24293e;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+.cyber-toast.show {
+    bottom: 30px;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                /* استجابة الشاشات الصغيرة للموبايل */
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @media (max-width: 480px) {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .dev-contacts {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            flex-direction: column;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    gap: 5px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .separator {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    display: none;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+/* 📱 Media Queries: دعم التجاوب مع شاشات الموبايل والتابلت */
+
+@media (max-width: 650px) {
+    .cyber-container {
+        padding: 20px;
+    }
+    /* تحويل لوحة الإحصائيات لعمود واحد أو شكل مرن في الموبايل */
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .neon-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .input-group {
+        flex-direction: column;
+    }
+    .cyber-btn {
+        padding: 12px;
+        width: 100%;
+    }
+    .task-item {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    .task-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .dev-contacts {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .separator {
+        display: none;
+    }
+}
+
+/* أنيميشن الدخول */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
